@@ -1,3 +1,3 @@
-# NodeJs starter initial
+# Bloggin app nodejs
 
-- This is node js starter folder structure
+- This is a blogging platform using nodejs
