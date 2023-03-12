@@ -49,8 +49,7 @@ class Service {
 
     async get(id) {
         try{
-            const item = this.model.findById(id);
-
+            const item = await this.model.findById(id);
             if(!item) {
                 const error = new Error('Item not found');
 

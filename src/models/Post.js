@@ -1,28 +1,33 @@
 import mongoose,{Schema} from "mongoose";
-import uniqueValidator from "mongoose-unique-validator"
-import slugify from 'slugify'
+// import uniqueValidator from "mongoose-unique-validator"
+const slugify = require('slugify')
 
 class Post {
     initSchema() {
         const schema = new Schema({
-            title: {
-                type: String,
-                required: true,
+            'title': {
+                'type': String,
+                'required': true,
             },
-            slug: String,
-            subtitle: {
-                type: String,
-                required: false,
+            'slug': String,
+            'subtitle': {
+                'type': String,
+                'required': false,
             },
-            description: {
-                type: String,
-                required: false,
+            'description': {
+                'type': String,
+                'required': false,
             },
-            content: {
-                type: String,
-                required: true,
+            'content': {
+                'type': String,
+                'required': true,
             },
-        }, {timestamps: true});
+            'user': {
+                'type': Schema.Types.ObjectId,
+                'required': true,
+                'ref': 'user'
+            }
+        }, {'timestamps': true});
 
         schema.pre(
             "save",
@@ -36,7 +41,6 @@ class Post {
                 return next();
             },
             function (err) {
-                console.log('Here is the error')
                 next(err)
             }
         );
