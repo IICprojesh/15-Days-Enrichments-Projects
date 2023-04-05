@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="form.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@200&family=Poppins:wght@200&family=Roboto:ital,wght@0,300;0,400;1,300&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <form action="" method="">
+        <h1><span>My Form</span></h1>
+        <h2>Personal Information</h2>
+        <hr>
+        <label for="name">Full Name</label>
+        <input type="text" name="name" id="name">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password">
+
+        <h2>Additional Information</h2>
+        <hr>
+        <label for="gender">Gender</label>
+        <div class="radiocontrol">
+            <input type="radio" name="gender" value="male" id="male">
+            <label for="male">Male</label>
+        </div>
+        <div class="radiocontrol">
+            <input type="radio" name="gender" value="female" id="female">
+            <label for="female">Female</label>
+        </div>
+        <div class="radiocontrol">
+            <input type="radio" name="gender" value="others" id="others">
+            <label for="others">Others</label>
+        </div>
+        <label for="">How can I contact you?</label>
+        <div class="checkcontrol">
+
+            <input type="checkbox" id="call" name="call">
+            <label for="call">Ring me</label>
+            <input type="checkbox" id="mail" name="mail">
+            <label for="mail">Mail me</label>
+            <input type="checkbox" id="msg" name="msg">
+            <label for="msg">Message me</label>
+        </div>
+        <label for="hobbies">Hobbies</label>
+        <select name="hobbies" id="hobbies">
+            <option value="">Coding</option>
+            <option value="">Developing</option>
+            <option value="">Desiging</option>
+        </select>
+        <label for="hobbies">Feedback and Suggestion</label>
+        <textarea name="" id=""></textarea>
+        <div class="mybtn">
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </div>
+    </form>
+</body>
+
+</html>

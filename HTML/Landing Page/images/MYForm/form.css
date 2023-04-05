@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    background: white;
+    font-family: 'Anek Malayalam', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+form {
+    width: 450px;
+    margin: 20px auto;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+form h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+form h1 span {
+    border-bottom: 4px solid #000;
+}
+
+form label {
+    display: block;
+    /* margin: 10px auto; */
+    font-size: 20px;
+}
+
+form input,
+select,
+textarea {
+    display: block;
+    margin: 10px 0;
+    width: 100%;
+    font-size: 18px;
+    padding: 6px;
+    box-sizing: border-box;
+}
+
+.radiocontrol {
+    display: flex;
+
+}
+
+.radiocontrol input {
+    width: auto;
+    margin-right: 4px;
+    margin-top: 4px;
+
+}
+
+.radiocontrol label,
+.checkcontrol label {
+    font-size: 16px;
+}
+
+.checkcontrol {
+    display: flex;
+    justify-content: space-between;
+}
+
+.checkcontrol input {
+    width: auto;
+    margin-right: -90px;
+    margin-top: 4px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 7px 15px;
+    font-size: 18px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #000;
+    color: white;
+}
+
+.mybtn {
+    display: flex;
+    justify-content: flex-end;
+}

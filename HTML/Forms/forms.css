@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+
+    padding: 0;
+}
+
+body {
+    background: white;
+
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+form {
+    width: 450px;
+    margin: 20px auto;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 34px;
+    padding: 10px;
+}
+
+form h1 span {
+    border-bottom: 4px solid #000;
+}
+
+form h2 {
+    margin-top: 10px;
+}
+
+form label {
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 7px 0;
+    font-family: 'Anek Malayalam', sans-serif;
+}
+
+form input,
+select,
+textarea {
+    display: block;
+    width: 100%;
+    padding: 7px;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+form input:focus {
+    background: honeydew;
+}
+
+button {
+    margin-top: 30px;
+    font-size: 20px;
+    padding: 6px 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+}
+
+.mybtns {
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.radiocontrol {
+    display: flex;
+}
+
+.radiocontrol label,
+.checkcontrol label {
+    font-size: 18px;
+}
+
+.radiocontrol input {
+    width: auto;
+    margin-right: 7px;
+}
+
+.checkcontrol {
+    display: flex;
+    justify-content: space-between;
+}
+
+.checkcontrol input {
+    width: auto;
+    margin: 0 -100px 0 0;
+}
