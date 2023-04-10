@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -15,14 +16,19 @@
         width: 100%;
     }
     .control{
-        width: 400px;
+        width: 420px;
         /* height: 200px; */
-        margin: 20px auto;
+        margin: 25px auto;
         background-color: bisque;
         padding: 20px;
         border-radius: 10px;
         
     }
+    .control h1{
+        margin: 0;
+        text-align: center;
+    }
+
     .gohome{
         margin-left: 45%;
         text-decoration: none;
@@ -48,7 +54,7 @@
     .title{
         text-align: center;
         font-size: 35px;
-        margin: 20px 0;
+        margin: 10px 0;
         /* background-color: antiquewhite; */
     }
     #totalchar{
@@ -58,9 +64,44 @@
     #remainchar{
         font-size: 30px;
     }
+    .calculation .control label{
+        font-size: 22px;
+        font-weight: bold;
+        text-align: center;
+        
+    }
+    .arrange{
+        display: flex;
+        margin-top: 10px;
+        /* justify-content: space-between; */
+    }
+    .arrange input{
+        padding: 9px;
+        width: 40px;
+        font-size: 20px;
+    }
+    .arrange button{
+        margin-left: 50px;
+        padding: 10px;
+        background-color: aquamarine;
+        border: none;
+        border-radius: 10px;
+        font-size: 20px;
+        cursor: pointer;
+        }
+        .calculation .control p{
+            font-size: 25px;
+            text-align: center;
+            margin-top: 20px;
+            background-color:#000;
+            color: white;
+            padding: 10px;
+            display: none;
+        }
+   
 
   </style>
-    <script src="./script.js"  defer></script>
+<script src="./script.js" defer></script>
 </head>
 <body>
     <h1 class="title">This is Test js</h1>
@@ -74,5 +115,16 @@
         <span id="remainchar">40</span>/40
     </span>
    </div>
+ <div class="calculation">
+    <div class="control">
+        <h1 class="title">Calculate Sum</h1>
+        <label for="num" class="number">Enter the number:</label>
+     <div class="arrange">
+        <input type="text" name="" id="num">
+        <button class="sum">Calculate Sum</button>
+     </div>
+     <p class="output"></p>
+       </div>
+ </div>
 </body>
 </html>
