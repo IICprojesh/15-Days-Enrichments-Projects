@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<script src="https://kit.fontawesome.com/f2be6d220c.js" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@200&family=Poppins:wght@200&family=Roboto:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+    <title>Places Detail</title>
+</head>
+
+<body>
+    <header style="background-color: rgb(246, 240, 240);">
+        <div class="logo">
+            <a href="">Logo is Here</a>
+        </div>
+        <div class="nav" style="justify-content: center; align-items: center; padding: 6px 2px;" >
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'aboutjs' %}"> About js</a>
+            <a href="">Contact</a>
+        </div>
+    </header>
+ <section  class="product-detail">
+    <h1 class="maintopic"><span>Places Detail</span></h1>
+<div class="prodetail">
+   <div class="imgsection">
+    <img src="{{indvPlace.images.url}}" alt="">
+   </div>
+   <div class="detailsection">
+    <span class="blank">yuiu</span>
+    <h1>{{indvPlace.name}}</h1>
+    <h3>{{indvPlace.price}}</h3>
+    <p class="detail">{{indvPlace.detail}}</p>
+    <a href="{% url 'home' %}">Back to Home</a>
+   </div>
+</div>
+
+ </section>
+    <footer class="footer">
+        <div class="mainfooter">
+            <h2>This is footer</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+            Perspiciatis nisi expedita ab molestiae? Eaque ex totam ad itaque nostrum neque?
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe, sit.</p>
+        <div class="link">
+            <i class="fa fa-facebook "></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin"></i>
+            <!-- <i class="fa fa-coffee fa-5x"></i> -->
+        </div>
+        </div>
+
+    </footer>
+</body>
+
+</html>
