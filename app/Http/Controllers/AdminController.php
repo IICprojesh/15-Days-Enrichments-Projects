@@ -23,7 +23,7 @@ class AdminController extends Controller
     {
         $attributes = array_merge($this->validatePost(), [
             'user_id' => request()->user()->id,
-            'thumbnail' => request()->file('thumbnail')->store('thumbnails')
+            'thumbnail' => request()->file('thumbnail')->store('thumbnails'),
         ]);
 
         Post::create($attributes);
@@ -64,7 +64,7 @@ class AdminController extends Controller
         $attributes = request()->validate([
             'title' => 'required',
             'slug' => ['required', Rule::unique('posts', 'slug')->ignore($post)],
-            'thumbnail' => $post->exists ? ['image'] : ['required|image'],
+            'thumbnail' => $post->exists ? ['image'] : ['required'],
             'excerpt' => 'required',
             'body' => 'required',
             'category_id' => ['required', Rule::exists('categories', 'id')]

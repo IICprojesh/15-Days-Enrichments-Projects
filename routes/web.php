@@ -7,8 +7,7 @@ use App\Http\Controllers\SessionsController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\PetrolumController;
-use App\Http\Controllers\WeatherController;
-use App\Models\Petrolum;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -40,23 +39,20 @@ Route::post('sessions', [SessionsController::class, 'store'])->middleware('guest
 Route::post('logout', [SessionsController::class, 'destroy'])->middleware('auth');
 
 //Admin
-Route::middleware('can:admin')->group(function () {
     //if the routes within the same controller contains all seven functions, can resolve into code below
     //Route::resource('admin/posts', AdminController::class)->except('show');
 
-    Route::get('admin/posts/create', [AdminController::class, 'create']);
-    Route::post('admin/posts', [AdminController::class, 'store']);
+Route::get('admin/posts/create', [AdminController::class, 'create']);
+Route::post('admin/posts', [AdminController::class, 'store']);
 
-    Route::get('admin/posts', [AdminController::class, 'index']);
-    Route::get('admin/posts/{post}/edit', [AdminController::class, 'edit']);
+Route::get('admin/posts', [AdminController::class, 'index']);
+Route::get('admin/posts/{post}/edit', [AdminController::class, 'edit']);
 
-    Route::patch('admin/posts/{post}', [AdminController::class, 'update']);
-    Route::delete('admin/posts/{post}', [AdminController::class, 'destory']);
+Route::patch('admin/posts/{post}', [AdminController::class, 'update']);
+Route::delete('admin/posts/{post}', [AdminController::class, 'destory']);
 
-});
 
-Route::get('/product',[PetrolumController::class, 'index']);
-Route::get('/products',[PetrolumController::class,'show']);
+
 
 
 

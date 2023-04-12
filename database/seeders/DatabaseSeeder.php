@@ -3,7 +3,7 @@
 use App\Models\User;
 use App\Models\Category;
 use App\Models\Post;
-
+use Carbon\Carbon;
 use Illuminate\Database\Seeder;
 
 
@@ -19,23 +19,15 @@ class DatabaseSeeder extends Seeder
         //created factory and assigned fake data from faker class into the database.
         Post::factory(10)->create();
 
-    //    $user = User::factory()->create();    
+        User::create([
+            'username' => 'admin',
+            'name' => 'safal',
+            'email' => 'safaladhikari030@gmail.com',
+            'password' => bcrypt('safal$0001'),
+            'role_name' => 'admin',
+            'email_verified_at' => Carbon::now(),
+        ]);    
 
-    // Manual way of inserting data into the database without factory model
-    //    $personal = Category::create([
-    //        'name' => 'Personal',
-    //        'slug' => 'personal'
-    //    ]);
-
-
-    //     Post::create([
-    //         'user_id' => $user->id,
-    //         'category_id' => $personal->id,
-    //         'title' => 'My Personal Post',
-    //         'slug' => 'my-personal-post',
-    //         'excerpt' => 'This is the excerpt part of the personal post.',
-    //         'body' => 'I am very excited about the blog posts generating using laravel and this is my first project.'
-
-    //     ]);
+    
     }
 }

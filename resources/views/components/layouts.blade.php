@@ -1,6 +1,6 @@
     <!doctype html>
 
-    <title>Laravel From Scratch Blog</title>
+    <title>IIC Blog</title>
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
@@ -32,10 +32,9 @@
                             <button class="text-xs font-bold uppercase">Welcome, {{ auth()->user()->name }}!</button>
                         </x-slot>
 
-                        @admin
-                            <x-dropDown-item href="/admin/posts" :active="request()->is('/admin/posts')">Dashboard</x-dropDown-item>
-                            <x-dropDown-item href="/admin/posts/create" :active="request()->is('/admin/posts/create')">New Post</x-dropDown-item>
-                        @endadmin
+
+                        <x-dropDown-item href="/admin/posts" :active="request()->is('/admin/posts')">Dashboard</x-dropDown-item>
+                        <x-dropDown-item href="/admin/posts/create" :active="request()->is('/admin/posts/create')">New Post</x-dropDown-item>
                         
                         <x-dropDown-item href="#" x-data="{}" @click.prevent="document.querySelector('#logout-form').submit()">Log out</x-dropDown-item>
 
