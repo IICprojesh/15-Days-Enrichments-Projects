@@ -13,16 +13,21 @@ class _MyLoginState extends State<MyLogin> {
     return Container(
       decoration: const BoxDecoration(
           image: DecorationImage(
-              image: AssetImage('assets/login.png'), fit: BoxFit.cover)),
+              image: AssetImage('assets/login.png'), fit: BoxFit.cover),
+              
+              ),
+              
       child: Scaffold(
+        
         backgroundColor: Colors.transparent,
-        body: Stack(
-          children: [
+        body: Stack(  
+          children: [ 
+            const SizedBox(height: 80.0), 
             Container(
-              padding: const EdgeInsets.only(left: 35, top: 130),
-              child: const Text(
-                'welcome\n Back',
-                style: TextStyle(color: Colors.white, fontSize: 33),
+              margin: const EdgeInsets.only(left: 75, top: 100),
+              decoration: const BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage('assets/logo.png'), fit: BoxFit.none)
               ),
             ),
             SingleChildScrollView(
@@ -43,7 +48,7 @@ class _MyLoginState extends State<MyLogin> {
                           borderRadius: BorderRadius.circular(10),
                         ),
                       ),
-                    ),
+                    ),  
                     const SizedBox(
                       height: 30,
                     ),
