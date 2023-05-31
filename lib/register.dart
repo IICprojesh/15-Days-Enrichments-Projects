@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class MyRegister extends StatefulWidget{
   const MyRegister({Key? key}) : super(key: key);
@@ -8,12 +9,13 @@ class MyRegister extends StatefulWidget{
 }
 
 class _MyRegisterState extends State<MyRegister> {
+  var nameController = TextEditingController();
   @override 
   Widget build(BuildContext context){
     return Container(
       decoration: const BoxDecoration(
           image: DecorationImage(
-              image: AssetImage('assets/register.png'), fit: BoxFit.cover)),
+              image: AssetImage('assets/images/register.png'), fit: BoxFit.cover)),
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.transparent,
@@ -95,7 +97,23 @@ class _MyRegisterState extends State<MyRegister> {
                    Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children:  [
-                        TextButton(
+                        ElevatedButton(
+                          onPressed: () async {
+                            var name = nameController.text.toString();
+
+                            var prefs = await SharedPreferences.getInstance();
+                            prefs.setString("name",name);
+                          }, 
+                          child: const Text(
+                            'Sign In', 
+                            style: TextStyle(
+                              decoration: TextDecoration.underline,
+                              fontSize: 18,
+                              color: Colors.white,
+                          ),
+                          ),
+                        ),
+                        ElevatedButton(
                           onPressed: () {
                             Navigator.pushNamed(context, 'login');
                           }, 
